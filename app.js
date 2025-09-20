@@ -7,12 +7,12 @@ function adicionarAmigo() {
     const nome = input.value.trim();
 
     if (nome === "") {
-        alert("Digite um nome válido!");
+        alert("Espaço em branco, digite um nome.");
         return;
     }
 
     if (listaAmigos.includes(nome)) {
-        alert("Esse nome já foi adicionado!");
+        alert("Esse nome já está na lista");
         input.value = "";
         return;
     }
@@ -34,7 +34,7 @@ function atualizarLista() {
 
 function sortearAmigo() {
     if (listaAmigos.length < 2) {
-        alert("Adicione pelo menos 2 amigos para sortear.");
+        alert("Adicione pelo menos 2 amigos.");
         return;
     }
 
