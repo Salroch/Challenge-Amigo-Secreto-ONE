@@ -34,14 +34,14 @@ function atualizarLista() {
 
 function sortearAmigo() {
     if (listaAmigos.length < 2) {
-        alert("Adicione pelo menos 2 amigos.");
+        alert("Adicione ao menos 2 amigos.");
         return;
     }
 
     const indiceSorteado = Math.floor(Math.random() * listaAmigos.length);
     const nomeSorteado = listaAmigos.splice(indiceSorteado, 1)[0];
 
-    resultadoElement.innerHTML = `<li>O amigo secreto sorteado é: <strong>${nomeSorteado}</strong></li>`;
+    resultadoElement.innerHTML = `<li>O amigo secreto sorteado foi: ${nomeSorteado}</li>`;
     atualizarLista();
 }
 
@@ -56,4 +56,5 @@ document.getElementById("amigo").addEventListener("keydown", function (event) {
         event.preventDefault();
         adicionarAmigo();
     }
+
 });
